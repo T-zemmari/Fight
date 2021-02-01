@@ -15,10 +15,18 @@ header{
 }
 h1{
     color: blanchedalmond;}
-.container{
-    
+
+.contenedor{
     width: 100vw;
     height: 100vh;
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+}    
+.container1{
+    
+    width: 100vw;
+    height: 50vh;
     display: flex;
     flex-direction: row;
     background-color: black;
@@ -39,4 +47,43 @@ h1{
 img{
     height: 100%;
     width: 100%;
+}
+
+.container2{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    margin: auto;
+    justify-content: space-evenly;
+    
+}
+
+.teamOne{
+    display: flex;
+    border: blanchedalmond solid 0.2em;
+    width: 24em;
+    height: 10em;
+    flex-direction: row;
+
+}
+.vs{
+    display: flex;
+    border: blanchedalmond solid 0.2em;
+    width: 8em;
+    height: 10em;
+}
+.teamTwo{
+    display: flex;
+    border: blanchedalmond solid 0.2em;
+    width: 24em;
+    height: 10em;
+    flex-direction: row;
+}
+.elegidos{
+    display: flex;
+    border: 0.2em solid red;
+    width: 8em;
+    height: 10em;
 }
