@@ -54,6 +54,18 @@ h1{
     font-family: fantasy;
     
 }
+.Play{
+    margin-left: -3.7em;
+    
+    width: 8em;
+    height: 2em;
+    background-color: darkred;
+}
+.stop{
+    width: 8em;
+    height: 2em;
+    background-color: darkred;
+}
 
 
 footer{

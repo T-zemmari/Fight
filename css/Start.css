@@ -9,6 +9,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(236, 13, 13);
    
@@ -86,4 +87,19 @@ img{
     border: 0.2em solid red;
     width: 8em;
     height: 10em;
+}
+.Play{
+    
+    margin-left: 5em;
+    width: 8em;
+    height: 2em;
+    background-color: darkred;
+    color: rgb(216, 212, 205);
+}
+.stop{
+    margin-right: 5em;
+    width: 8em;
+    height: 2em;
+    background-color: darkred;
+    color:rgb(216, 212, 205);
 }
