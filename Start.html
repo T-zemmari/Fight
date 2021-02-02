@@ -8,58 +8,58 @@
 </head>
 <body>
     <header>
-        <audio src="audio/Música de Acción y Suspenso Música de Instriga y Suspense Música Misteriosa Instrumental_128k.mp3" id="myAudio"></audio>
+        <audio src="audio/Música de Acción y Suspenso Música de Instriga y Suspense Música Misteriosa Instrumental_128k.mp3" id="myAudio"  ></audio>
         <button class="Play"  onclick="playAudio()" type="button">Play Audio</button>
         <h1>Fighters</h1>
         <button class="stop"  onclick="pauseAudio()" type="button">Pause Audio</button>
         
     </header>
-   <div class="contenedor">
+    <!-- Esta es la primera pantalla , fase elegir jugadores-->
+   <div class="contenedor" id="PrimeraPantalla" style="display: block;" >
 
         <div class="container1">
-           <div class="Fighters" id= "jetlee" onclick="elegir(jetlee)">
-            <img src="img/jetlee.jpg" alt="Jet lee">
+           <div class="Fighters" id= "jetlee" onclick="seleccion('jetlee')" >
+            <img src="img/jetlee.jpg" class="imagenFighters" >
            </div>
-           <div class="Fighters" id="jackie" onclick="elegir(jackie)">
-            <img src="img/jackie.jpg" alt="jackie">
+           <div class="Fighters" id="jackie" onclick="seleccion('jackie')" >
+            <img src="img/jackie.jpg" class="imagenFighters">
            </div>
-           <div class="Fighters" id="tonny" onclick="elegir(tonny)">
-            <img src="img/tonny.jpg" alt="tonny">
+           <div class="Fighters" id="tonny" onclick="seleccion('tonny')">
+            <img src="img/tonny.jpg" class="imagenFighters">
            </div>
-           <div class="Fighters" id="tyson" onclick="elegir(tyson)">
-            <img src="img/tyson.jpg"">
+           <div class="Fighters" id="ipman" onclick="seleccion('ipman')">
+            <img src="img/ipman.jpg" class="imagenFighters" >
            </div>
-           <div class="Fighters" id="bruce" onclick="elegir(bruce)">
-            <img src="img/bruce.jpg" alt="bruce">
+           <div class="Fighters" id="bruce" onclick="seleccion('bruce')">
+            <img src="img/bruce.jpg" class="imagenFighters">
            </div>
-           <div class="Fighters" id="ronda" >
-            <img src="img/ronda.jpg" alt="" onclick="elegir(ronda)">
+           <div class="Fighters"  id="ronda" onclick="seleccion('ronda')">
+            <img src="img/ronda.jpg"  class="imagenFighters">
            </div>
-           <div class="Fighters" id="mcgregor">
-            <img src="img/mcgregor.jpg" alt="mcgregor" onclick="elegir(mcgregor)">
+           <div class="Fighters" id="mcgregor" onclick="seleccion('mcgregor')">
+            <img src="img/mcgregor.jpg"  class="imagenFighters" >
            </div>
-           <div class="Fighters" id="ipman" onclick="elegir(ipman)">
-            <img src="img/ipman.jpg" alt="ipman">
+           <div class="Fighters" id="tyson" onclick="seleccion('tyson')">
+            <img src="img/tyson.jpg"  class="imagenFighters">
            </div>
          </div>
 
-     <div class="container2">
-        <div class="teamOne" id="One">
-            <div class="elegidos" id="fighter1"></div>
-            <div class="elegidos" id="fighter2"></div>
-            <div class="elegidos" id="fighter3"></div>
-        </div>
-        <div class="vs">
-            <div class="elegidos">
-                <img src="img/VS.gif">
-                
+         <!--Esta es la segunda pantalla que se mostrara cuando pasemos a la fase de lucha-->
+
+     <div class="container2" id="segundaPantalla" >
+            <button class="botonSegundaPantalla" id="listoParaLaSiguientePantalla" style="display:none;" onclick="Empieza()">
+              Go to Start The Fight
+            </button>
+            <div class="panelElegidos" id="jugador1" >   </div>
+            <div class="panelElegidos" >
+                <img src="img/VS.gif" class="vs">
             </div>
+            <div class="panelElegidos" id="jugador2" ></div>
+           
+        
+        
         </div> 
-        <div class="teamTwo" id="Two">
-            <div class="elegidos" id="fighter4"></div>
-            <div class="elegidos" id="fighter5"></div>
-            <div class="elegidos" id="fighter6"></div>
-        </div> 
+        
         
       </div>
     
