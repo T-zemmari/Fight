@@ -4,23 +4,9 @@
     box-sizing: 0;
 }
 
-
-/*contenedor de todo el viewport* de la primera pagina */
-.contenedor{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    display:flex;
-    flex-direction: column;
-} 
-/*Aqui cambio de pantalla cuando eligo los jugadores y pasamos a la pantalla del juego*/
-.cambioDePantalla1A2{
-    display: none;
-}
-
 header{
     width: 100vw;
-    height: 5em;
+    height: 2em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -30,103 +16,97 @@ header{
    
 }
 h1{
-    color: blanchedalmond;}
-/*Contenedor de la pantalla 1 donde estan los jugadores a elegir y los que se muestran despues de la eleccion*/
-
-.container1{
-    
-    width: 100vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    background-color: black;
-    margin: auto;
-    justify-content: space-evenly;
-   
- }
-
-/* dimensiones de los divs de los luchadores en la pantalla 1*/
-
-.Fighters{
-    margin-top: 0.5em;
-    display: flex;
-    border: blanchedalmond solid 0.2em;
-    width: 8em;
-    height: 10em;
-    
-
-   
+    color: blanchedalmond;
 }
-/* las dimensiones de las imagenes de los luchadores en la pantalla 1*/
-
-.imagenFighters{
-    
-    height: 100%;
-    width: 100%;
-   
-   
-}
-/*cambiamos la classe del elemento imagenes cuando se hace la seleccion*/
-.nuevosImagenesFighters{
-    height: 80%;
-    width:10%;
-    border-radius: 50%;
- -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%);
-}
-/*el contenedor de los divs de los luchadores*/
-
-.container2{
-    width: 100vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    background-color: black;
-    margin: auto;
-   
-    justify-content: center;
-    
-}
-/*el panel donde se van a mostrar los jugadores elejidos*/
-
-.panelElegidos{
-    display: flex;
-    border: 0.2em solid red;
-    width: 8em;
-    height: 10em;
-    margin-left: 1em;
-}
-.vs{
-    width: 100%;
-    height: 100%;
-}
-
-/* El boton que aparecera cuando este listo para pasar a la pantalla 2*/
-
-.botonSegundaPantalla{
-width: 10em;
-height: 5em;
-background-color: rgb(255, 0, 0);
-color: rgb(216, 212, 205);
-margin-top: 3.5em;
-border-radius: 2em;
-border:rgb(236, 13, 13) solid 0.5em;
-
-}
-
-/*botones play music colocados en el header de la primera pagina*/
-
 .Play{
-    margin-left: 5em;
-    width: 8em;
+    background-color: rgb(82, 2, 2);
+    color: white;
+    margin-left: 20em;
+    width: 10em;
     height: 2em;
-    background-color: darkred;
-    color: rgb(216, 212, 205);
+    border-radius: 0.5em;
 }
 .stop{
-    margin-right: 5em;
-    width: 8em;
+    background-color: rgb(82, 2, 2);
+    color: white;
+    margin-right: 20em;
     height: 2em;
-    background-color: darkred;
-    color:rgb(216, 212, 205);
+    width: 10em;
+    border-radius: 0.5em;
 }
+/*Esta es la pantalla principal ocupa toda la pantalla.*/
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+/*esta es la pantalla de los jugadores dentro hay 2 bloques de jugagores*/
+.pantallaJugadores{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ /* pantalla del primer blque de 4 jugadores*/
+
+.PrimerosCuatroJugadores{
+    
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Fighters{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    border: rgb(255, 72, 0) 0.5em solid;
+}
+.imagenFighters{
+    width:8em ;
+    height:8em;
+    border-radius: 50%;
+}
+.RestoDeJugadores{
+    
+    display: flex;
+    flex-direction: row;
+}
+
+/* Pantalla inferior dentro estan los jugadores seleccionados */
+.pantallaSeleccion{
+width: 100vw;
+height: 50vh;
+/*border: blanchedalmond dashed 0.2em;*/
+background-color: black;
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+justify-content: space-evenly;
+}
+.panelElegidos{
+    width: 13em;
+    height: 15em;
+    border:rgb(245, 13, 13) solid 0.2em;
+
+}
+.vs{
+    width: 15em;
+    height: 8em;
+    border: red solid 1em;
+}
+.versus{
+    width: 15em;
+    height: 15em;
+}
+
+
+
+
+

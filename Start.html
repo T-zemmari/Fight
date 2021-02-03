@@ -15,9 +15,10 @@
         
     </header>
     <!-- Esta es la primera pantalla , fase elegir jugadores-->
-   <div class="contenedor" id="PrimeraPantalla" style="display: block;" >
 
-        <div class="container1">
+    <div class="contenedor" id="PrimeraPantalla" >
+    <div class="pantallaJugadores">
+       <div class="PrimerosCuatroJugadores">
            <div class="Fighters" id= "jetlee" onclick="seleccion('jetlee')" >
             <img src="img/jetlee.jpg" class="imagenFighters" >
            </div>
@@ -30,6 +31,8 @@
            <div class="Fighters" id="ipman" onclick="seleccion('ipman')">
             <img src="img/ipman.jpg" class="imagenFighters" >
            </div>
+        </div>   
+       <div class="RestoDeJugadores">
            <div class="Fighters" id="bruce" onclick="seleccion('bruce')">
             <img src="img/bruce.jpg" class="imagenFighters">
            </div>
@@ -42,29 +45,27 @@
            <div class="Fighters" id="tyson" onclick="seleccion('tyson')">
             <img src="img/tyson.jpg"  class="imagenFighters">
            </div>
-         </div>
+        </div>
+    </div>
+  
 
          <!--Esta es la segunda pantalla que se mostrara cuando pasemos a la fase de lucha-->
 
-     <div class="container2" id="segundaPantalla" >
-            <button class="botonSegundaPantalla" id="listoParaLaSiguientePantalla" style="display:none;" onclick="Empieza()">
-              Go to Start The Fight
-            </button>
-            <div class="panelElegidos" id="jugador1" >   </div>
-            <div class="panelElegidos" >
-                <img src="img/VS.gif" class="vs">
-            </div>
-            <div class="panelElegidos" id="jugador2" ></div>
-           
+    <div class="pantallaSeleccion" id="segundaPantalla" >
+        <button class="botonSegundaPantalla" id="listoParaLaSiguientePantalla" style="display:none;" onclick="Empieza()">
+           Go to Start The Fight
+        </button>
+        <div class="panelElegidos" id="jugador1" ></div>
+        <div class="Versus" >
+          <img src="img/VS.gif" class="vs">
+        </div>
+        <div class="panelElegidos" id="jugador2" ></div>
+    </div> 
         
-        
-        </div> 
-        
-        
-      </div>
+  </div>
     
      
 
-    <script src="js/main.js"></script>
+    
 </body>
 </html>

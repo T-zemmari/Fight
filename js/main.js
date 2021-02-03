@@ -79,6 +79,7 @@ function pauseAudio() {
      }
      //mostrar en pantalla que los jugadores estan ya selecionados 
      document.getElementById("listoParaLaSiguientePantalla").style.display = 'block';
+     ujty
 
      
      
