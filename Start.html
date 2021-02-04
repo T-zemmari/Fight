@@ -7,65 +7,146 @@
     <link rel="stylesheet" href="css/Start.css">
 </head>
 <body>
-    <header>
-        <audio src="audio/Música de Acción y Suspenso Música de Instriga y Suspense Música Misteriosa Instrumental_128k.mp3" id="myAudio"  ></audio>
-        <button class="Play"  onclick="playAudio()" type="button">Play Audio</button>
-        <h1>Fighters</h1>
-        <button class="stop"  onclick="pauseAudio()" type="button">Pause Audio</button>
-        
-    </header>
     <!-- Esta es la primera pantalla , fase elegir jugadores-->
-
-    <div class="contenedor" id="PrimeraPantalla" >
-    <div class="pantallaJugadores">
-       <div class="PrimerosCuatroJugadores">
-           <div class="Fighters" id= "jetlee" onclick="seleccion('jetlee')" >
-            <img src="img/jetlee.jpg" class="imagenFighters" >
-           </div>
-           <div class="Fighters" id="jackie" onclick="seleccion('jackie')" >
-            <img src="img/jackie.jpg" class="imagenFighters">
-           </div>
-           <div class="Fighters" id="tonny" onclick="seleccion('tonny')">
-            <img src="img/tonny.jpg" class="imagenFighters">
-           </div>
-           <div class="Fighters" id="ipman" onclick="seleccion('ipman')">
-            <img src="img/ipman.jpg" class="imagenFighters" >
-           </div>
-        </div>   
-       <div class="RestoDeJugadores">
-           <div class="Fighters" id="bruce" onclick="seleccion('bruce')">
-            <img src="img/bruce.jpg" class="imagenFighters">
-           </div>
-           <div class="Fighters"  id="ronda" onclick="seleccion('ronda')">
-            <img src="img/ronda.jpg"  class="imagenFighters">
-           </div>
-           <div class="Fighters" id="mcgregor" onclick="seleccion('mcgregor')">
-            <img src="img/mcgregor.jpg"  class="imagenFighters" >
-           </div>
-           <div class="Fighters" id="tyson" onclick="seleccion('tyson')">
-            <img src="img/tyson.jpg"  class="imagenFighters">
-           </div>
-        </div>
-    </div>
+    <div class="page1"  id="screenOne" style="display: block;">
+        <div class="contenedor" id="PrimeraPantalla" >
+            <header>
+                <audio src="/audio/Música de Acción y Suspenso Música de Instriga y Suspense Música Misteriosa Instrumental_128k.mp3" id="myAudio" autoplay></audio>
+                <button class="Play"  onclick="playAudio()" type="button">Play Audio</button>
+                <h1>Fighters</h1>
+                <button class="stop"  onclick="pauseAudio()" type="button">Pause Audio</button>
+                
+            </header>
+            <div class="pantallaJugadores">
+              <div class="PrimerosCuatroJugadores">
+                  <div class="Fighters" id= "jetlee" onclick="seleccion('jetlee')" >
+                     <img src="img/jetlee.jpg" class="imagenFighters" >
+                  </div>
+                 <div class="Fighters" id="jackie" onclick="seleccion('jackie')" >
+                     <img src="img/jackie.jpg" class="imagenFighters">
+                 </div>
+                <div class="Fighters" id="tonny" onclick="seleccion('tonny')">
+                   <img src="img/tonny.jpg" class="imagenFighters">
+                </div>
+                <div class="Fighters" id="ipman" onclick="seleccion('ipman')">
+                   <img src="img/ipman.jpg" class="imagenFighters" >
+                </div>
+             </div>   
+        
+             <div class="RestoDeJugadores">
+               <div class="Fighters" id="bruce" onclick="seleccion('bruce')">
+                 <img src="img/bruce.jpg" class="imagenFighters">
+              </div>
+              <div class="Fighters"  id="ronda" onclick="seleccion('ronda')">
+                  <img src="img/ronda.jpg"  class="imagenFighters">
+              </div>
+              <div class="Fighters" id="mcgregor" onclick="seleccion('mcgregor')">
+                  <img src="img/mcgregor.jpg"  class="imagenFighters" >
+              </div>
+              <div class="Fighters" id="tyson" onclick="seleccion('tyson')">
+                  <img src="img/tyson.jpg"  class="imagenFighters">
+              </div>
+             </div>
+          </div>
+         </div> 
   
 
          <!--Esta es la segunda pantalla que se mostrara cuando pasemos a la fase de lucha-->
 
-    <div class="pantallaSeleccion" id="segundaPantalla" >
-        <button class="botonSegundaPantalla" id="listoParaLaSiguientePantalla" style="display:none;" onclick="Empieza()">
-           Go to Start The Fight
-        </button>
-        <div class="panelElegidos" id="jugador1" ></div>
-        <div class="Versus" >
-          <img src="img/VS.gif" class="vs">
-        </div>
-        <div class="panelElegidos" id="jugador2" ></div>
-    </div> 
+    <div class="pantallaSeleccion" id="segundaPantalla">
         
-  </div>
+        <div class="panelElegidos" id="jugador1" ></div>   
+        
+           <div class="VersusYGoStart">
+              <div class="Versus" >
+                  <img src="img/VS.gif" class="vs">
+               <button class="botonSegundaPantalla" id="listoParaLaSiguientePantalla" style="display:block"
+              onclick="cambioDePantalla('screenOne','screenTwo');">
+                       Go to Start The Fight
+               </button>
+             </div>
+            </div>
+        <div class="panelElegidos" id="jugador2" ></div>    
+
+      </div> 
+     </div>
+     
+     <div class="page2" id="screenTwo" style="display: none;">
+        
+         <div class="fightScreen">
+            <header class="barraDelaPelea">
+                <audio src="audio/Música de Acción y Suspenso Música de Instriga y Suspense Música Misteriosa Instrumental_128k.mp3" id="myAudio"  ></audio>
+                <button class="Play playEnpelea"  onclick="playAudio()" type="button">P</button>
+                <div class="barraDeVidaFighter1"></div>
+                <div class="vs2"></div>
+                <div class="barraDeVidaFighter2"></div>
+                <button class="stop stopEnpelea"  onclick="pauseAudio()" type="button">S</button>
+                
+            </header>
+            <div class="pantallaPelea">
+                <div class="player1" id="Contrincante1"></div>
+                <div class="Golpes"  id="hit" onclick="Golpear()">
+                    <button>
+                        <img src="/img/Guantes.jpg" class="imagenDelGuante">
+                    </button>
+                </div>
+                <div class="player2" id="Contrincante2"></div>
+            </div>
+            
+            <div class="pantallaEstadisticas">
+                <div class="enemigo1">
+                    <h3 class="cabecera"><strong>Player1</strong>
+                        </h3>
+                    <h3 class="name" id="nombre1">Nombre:</h3>
+                    <h3 class="fuerza" id="fuerza1">Fuerza:</h3>
+                    <h3 class="suerte" id="suerte1">Suerte:</h3>
+                </div>
+                <div class="quienHaGanado" ></div>
+                <div class="enemigo2">
+                    <h3 class="cabecera"><strong>Player2</strong></h3>
+                    <h3 class="name" id="nombre2">Nombre:</h3>
+                    <h3 class="fuerza" id="fuerza2">Fuerza:</h3>
+                    <h3 class="suerte" id="suerte2">Suerte:</h3>
+                </div>
+            </div>
+
+
+
+
+
+         </div>
+         
+     </div>
+
+     <!--Final page 2 y inicio page 3-->
+     <div class="page3" id="screenTree"   style="display: none;">
+        <header class=" cabeceraPagina3">
+            <audio src="/audio/Música de Acción y Suspenso Música de Instriga y Suspense Música Misteriosa Instrumental_128k.mp3" id="myAudio"  ></audio>
+            <button class="Play"  onclick="playAudio()" type="button">Play Audio</button>
+            <h1>Winner </h1>
+            <button class="stop"  onclick="pauseAudio()" type="button">Pause Audio</button>
+            
+        </header>
+        <div class="screenWinnerOrlooser">
+            <div class="Winner" id="Winner"></div>
+            <div class="Winner" id="looser"></div>
+        </div> 
+           <div class="mensajes"> 
+            <div class="mensaje">
+                <h2 id="mensaje"></h2>
+            </div>
+            <div class="mensaje">
+                <h2 id="mensaje2"></h2>
+            </div>
+        </div>
+
+        
+  
+  
+
     
      
 
-    
+    <script src="js/main.js"></script>
 </body>
 </html>

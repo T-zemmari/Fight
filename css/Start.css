@@ -1,9 +1,11 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    
 }
-
+body{
+    background-color: rgb(7, 7, 7);
+}
 header{
     width: 100vw;
     height: 2em;
@@ -37,15 +39,16 @@ h1{
 /*Esta es la pantalla principal ocupa toda la pantalla.*/
 .contenedor{
     width: 100vw;
-    height: 100vh;
+    
     background-color: black;
     display: flex;
     flex-direction: column;
 }
 /*esta es la pantalla de los jugadores dentro hay 2 bloques de jugagores*/
 .pantallaJugadores{
+    margin-top: 1.5em;
     width: 100vw;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,6 +75,14 @@ h1{
     height:8em;
     border-radius: 50%;
 }
+.nuevosImagenesFighters{
+    width:8em ;
+    height:8em;
+    border-radius: 50%;
+    -webkit-grayscale:100%;
+    filter: grayscale(100);
+}
+
 .RestoDeJugadores{
     
     display: flex;
@@ -81,7 +92,7 @@ h1{
 /* Pantalla inferior dentro estan los jugadores seleccionados */
 .pantallaSeleccion{
 width: 100vw;
-height: 50vh;
+height: 45vh;
 /*border: blanchedalmond dashed 0.2em;*/
 background-color: black;
 display:flex;
@@ -89,24 +100,251 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 justify-content: space-evenly;
+
 }
+/*los bloques donde se van a mostrar los jugadores eligidos*/
 .panelElegidos{
     width: 13em;
     height: 15em;
     border:rgb(245, 13, 13) solid 0.2em;
-
+    
+}
+.ImagenPantalla1{
+    width: 13em;
+    height: 15em;
+}
+/* panel de paso de pantalla cuando este listo para el empezar el combate*/
+.versusYGoStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*boton start the fighting*/
+.botonSegundaPantalla{
+    margin-left: -0.4em;
+    height: 4em;
+    width: 20em;
+    background-color: rgb(245, 4, 4);
+    color: white;
+    border: red solid 1em;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .vs{
     width: 15em;
     height: 8em;
-    border: red solid 1em;
+    border: red solid 0.3em;
 }
 .versus{
     width: 15em;
     height: 15em;
 }
 
+/* segunda pagina */
+/* aqui hay 3 divs en columna header con barras de vida , bloque donde van las imagenes de los contrincantes y el boton de atacar*/
+.fightScreen{
+    background-image: url(/img/arena.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.barraDelaPelea{
+    width: 100vw;
+    height: 4em;
+    background-color: rgb(5, 5, 5);
+}
+.playEnpelea{
+    width: 3em;
+    height: 2em;
+    margin-left: 1em;
+}
+.stopEnpelea{
+    width: 3em;
+    height: 2em;
+    margin-right: 1em;
+}
+.vs2{
+    width: 7.5em;
+    height: 3em;
+    background-image: url(/img/KO.gif);
+    background-position: center;
+    background-size: cover;
+    border-radius: 1em;
+}
+.barraDeVidaFighter1{
+    width: 15em;
+    height: 1em;
+    background-color: green;
+    margin-left: 0.5em;
+    border: 0.2em solid yellow;
+    border-radius: 1em;
+}
+.barraDeVidaFighter2{
+    width: 15em;
+    height: 1em;
+    background-color: green;
+    margin-left: 1em;
+    border: 0.2em solid yellow;
+    border-radius: 1em;
+}
+/*div de los contrincantes*/
+
+.pantallaPelea{
+    width: 100vw;
+    height: 90vh;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.player1{
+    width: 20em;
+    height: 60vh;
+    border: red solid 0.2em;
+    background-color: rgb(14, 13, 13);
+    
+}
+.player2{
+    width: 20em;
+    height:60vh;
+    border: red solid 0.2em;
+    background-color: rgb(14, 13, 13);
+}
+.ImagenPantalla2{
+    width: 20em;
+    height:60vh;
+}
+.Golpes{
+  width: 8em;
+  height: 8em;
+}
+.imagenDelGuante{
+    width: 8em;
+    height: 8em;
+    border-radius: 5em;
+    
+
+}
+/*bloque de las estadisticas*/
+.pantallaEstadisticas{
+    width: 100vw;
+    height: 26vh;
+  /*  background-color: rgb(14, 13, 13);*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.enemigo1{
+    width: 22em;
+    height: 20vh;
+    border: rgb(236, 13, 13) solid 0.2em;
+    background-color: rgb(238, 126, 46);
+    margin-bottom: 1em;
+}
+
+.enemigo2{
+    width: 22em;
+    height: 20vh;
+    border: rgb(236, 13, 13) solid 0.2em;
+    background-color: rgb(238, 126, 46);
+    margin-bottom: 1em;
+}
+
+.quienHaGanado{
+    background-image: url(/img/JTDe.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10em;
+    height: 20vh;
+    border: rgb(236, 13, 13) solid 0.2em;
+    border-radius: 2em;
+}
+h3{
+    color: rgb(10, 4, 0);
+    
+    margin-left: 0.5em;
+}
+.cabecera{
+    margin-left: 7em;
+}
+
+/* Estilos pagina 3 pagina del ganador!!!*/
+.page3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(12, 12, 12);
+    background-image: url(/img/29.gif);
+    background-size: cover;
+    background-clip: content-box;
+} 
 
 
 
+.cabeceraPagina3{
+ width: 100vw;
+ height:5em;
+ background-color: rgba(238, 16, 16 ,0.2);
 
+
+}
+.screenWinnerOrlooser{
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.Winner{
+   
+width: 15em;
+height: 20em;
+border: red solid 0.2em;
+background-color: rgb(14, 13, 13);
+
+}
+.mensajes{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.mensaje{
+    width: 30em;
+    height: 5em;
+    border: red solid 0.2em;
+    background-color: rgba(43, 255, 0,1);
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(1, 0, 8);
+    
+}
+
+.ImagenPantalla3{
+    width: 15em;
+    height: 20em;
+    
+}
