@@ -23,27 +23,28 @@ function pauseAudio() {
 
       attack(contrincante){
        //como sera el ataque
-       let factorRandom= Math.floor(Math.random()*2);
-       contrincante.vida -= this.fuerza + contrincante.defensa -(this.suerte * factorRandom);
+       let factorRandom= Math.floor(Math.random()*4);
+       this.vida -= (this.fuerza + contrincante.defensa -(this.suerte * factorRandom) + contrincante.defensa/2 + contrincante.fuerza/2 + contrincante.defensa/2 -this.fuerza);
        
       }
        combo(contrincante){
-         //Como sera el ataque especial
-       contrincante.vida -= this.fuerza*2 +(contrincante.defensa *2)-((this.suerte) *factorRandom);
+         //ataque casi fulminante
+         let factorRandom2= Math.floor(Math.random()*4);
+         this.vida -= (this.fuerza + contrincante.defensa -(this.suerte * factorRandom2) + contrincante.defensa/2 + contrincante.fuerza/2 + contrincante.defensa/2 -this.fuerza);
        
      }
   }
  
  // iniciar la seleccion de los personajes
  
-  let luchador1 =new Luchadores("jetlee",200,50,30,8,2);
-  let luchador2 =new Luchadores("jackie",200,40,60,5,7);
-  let luchador3 =new Luchadores("tonny",200,30,45,9,5);
-  let luchador4 =new Luchadores("tayson",200,25,45,6,8);
-  let luchador5 =new Luchadores("brucelee",200,25,80,7,5);
-  let luchador6 =new Luchadores("ronda",200,50,80,8,2);
-  let luchador7 =new Luchadores("mcgregor",200,45,39,6,8);
-  let luchador8 =new Luchadores("ipman",200,50,30,8,5);
+  let luchador1 =new Luchadores("jetlee",200,20,16,8,2);
+  let luchador2 =new Luchadores("jackie",200,20,18,4,8);
+  let luchador3 =new Luchadores("tonny",200,24,14,8,4);
+  let luchador4 =new Luchadores("tayson",200,22,12,6,8);
+  let luchador5 =new Luchadores("brucelee",200,22,16,6,8);
+  let luchador6 =new Luchadores("ronda",200,30,24,4,6);
+  let luchador7 =new Luchadores("mcgregor",200,30,26,6,8);
+  let luchador8 =new Luchadores("ipman",200,32,24,4,8);
   let arrayDeLosJugadores=[luchador1,luchador2,luchador3,luchador4,luchador5,luchador6,luchador7,luchador8];
   console.log(arrayDeLosJugadores);
   let jugador1 ="";
@@ -51,21 +52,14 @@ function pauseAudio() {
 
   let inicio = ()=>{
     let vidaInicial = 200;
-    jugador1.vida= vidaInicial;
-    jugador2.vida= vidaInicial;
+    luchador1.vida= vidaInicial;
+    luchador2.vida= vidaInicial;
+    jugador1 ="";
+    jugador2 ="";
 
   }
   
-    
-     
-
-     
-  /*let cambioDePantalla = () => {
-    let pantallaPrincipal = document.getElementById("screenOne");
-    let pantallasegundaria = document.getElementById("screenTwo");
-    pantallaPrincipal.style.display = "none";
-    pantallasegundaria.style.display = "block";
-  }*/
+  //cambio de pantalla
 
   let cambioDePantalla = (stage1,stage2,stage3) => {
     let pantalla1 = document.getElementById(stage1);
@@ -77,15 +71,25 @@ function pauseAudio() {
     pantalla2.style.display = 'block';
     pantalla3.style.display = 'none';
 
-
-    //resolveIn(2000).then(delay => {
-     // changeScreen("stage1","stage2");
-  //});
-    
-
-
 };
 
+
+ /* let cambioConRetraso = () =>{
+    resolveIn(3000).then(delay => {
+
+      cambiaPantalla("screenOne","screenTwo");
+      
+  });
+  }*/
+
+ /*let  cambio = ()=>{setTimeout(() => {cambioDePantalla();
+    
+  }, 3000);
+    
+  }*/
+
+
+//segundo cambio de pantalla
 
 let cambioPantallaGanador =(uno,dos,tres) =>{
     let pantalla1 = document.getElementById(uno);
@@ -102,36 +106,46 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
 
     // seleccion de los jugadores
 
-    let arrayJugadoresSelecionados = [];
-    console.log(arrayJugadoresSelecionados);
-    if(jugador1 =="jetlee"){
-      jugador1 = luchador1;
+    
+
+
+    let traductorDeTodosLosjugadores = {
+       "jetlee" : luchador1,
+       "jackie" : luchador2,
+        "tonny": luchador3,
+        "tayson":luchador4,
+        "brucelee" : luchador5,
+        "ronda" : luchador6,
+        "mcgregor":luchador7,
+        "ipman" :luchador8
     }
+      
+    
 
   let seleccion = (jugador) => {
     if(jugador1 == ""){
-      jugador1 = jugador;
-    arrayJugadoresSelecionados.push(jugador1);
+      jugador1 = traductorDeTodosLosjugadores[jugador];
+    
 
-     
+      document.getElementById("vida1").innerHTML += `${jugador1.vida}`;
       document.getElementById("nombre1").innerHTML += `${jugador1.nombre}`;
-      document.getElementById("fuerza1").innerHTML += jugador.fuerza;
-      document.getElementById("suerte1").innerHTML += jugador.suerte;
-      document.getElementById("Contrincante1").innerHTML =`<div ><img src="img/${jugador1}.jpg" class="ImagenPantalla2"></div>`;
-      document.getElementById("jugador1").innerHTML =  `<div ><img src="img/${jugador1}.jpg" class="ImagenPantalla1"></div>`;
+      document.getElementById("fuerza1").innerHTML += `${jugador1.fuerza}`;
+      document.getElementById("suerte1").innerHTML += `${jugador1.suerte}`;
+      document.getElementById("Contrincante1").innerHTML =`<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla2"></div>`;
+      document.getElementById("jugador1").innerHTML =  `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla1"></div>`;
       document.getElementById(jugador).className = "nuevosImagenesFighters";
       document.getElementById(jugador).onclick = "";
       
     }
     else{
-      jugador2 = jugador;
-      arrayJugadoresSelecionados.push(jugador2);
+      jugador2 = traductorDeTodosLosjugadores[jugador];
       
-      document.getElementById("nombre2").innerHTML += jugador.nombre;
-      document.getElementById("fuerza2").innerHTML += jugador.fuerza;
-      document.getElementById("suerte2").innerHTML += jugador.suerte;
-      document.getElementById("Contrincante2").innerHTML = `<div ><img src="img/${jugador2}.jpg" class="ImagenPantalla2" ></div>`;
-      document.getElementById("jugador2").innerHTML = `<div ><img src="img/${jugador2}.jpg" class="ImagenPantalla1" ></div>`;
+      document.getElementById("vida2").innerHTML += `${jugador2.vida}`;
+      document.getElementById("nombre2").innerHTML += `${jugador2.nombre}`;
+      document.getElementById("fuerza2").innerHTML += `${jugador2.fuerza}`;
+      document.getElementById("suerte2").innerHTML += `${jugador2.suerte}`;
+      document.getElementById("Contrincante2").innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla2" ></div>`;
+      document.getElementById("jugador2").innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla1" ></div>`;
       document.getElementById(jugador).className = "nuevosImagenesFighters";
       document.getElementById(jugador).onclick = "";
       //document.getElementById("listoParaLaSiguientePantalla").innerHTML.style.display ='block';
@@ -144,50 +158,51 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
   }
  // ataques 
  let Golpear = () => {
+   
   
   let turno = Math.floor(Math.random() * 2);
-  let combo=2;
+  let combo=Math.floor(Math.random()*8);
 
   if(turno == 0){
-      if(combo == 3){
+      if(combo == 7){
           console.log("ATAQUE ESPECIAL");
-          luchador1.combo(luchador2);
+          jugador1.combo(jugador2);
       }else{
 
-          luchador2.attack(luchador2);
+          jugador1.attack(jugador2);
       }
   }else{
-      if(combo == 3){
+      if(combo == 8){
           console.log("ATAQUE ESPECIAL");
-          luchador1.combo(luchador2);
+          jugador2.combo(jugador1);
       }else{
-        luchador2.attack(luchador1);
+        jugador2.attack(jugador1);
 
       }
       
   };
-  console.log("Vida del luchador1:" + luchador1.vida);
-  console.log("Vida del luchador1:" + luchador2.vida);
+  console.log("Vida del luchador1:" + jugador1.vida);
+  console.log("Vida del luchador2:" + jugador2.vida);
 
   let mensaje = document.getElementById("mensaje");
   let mensaje2 = document.getElementById("mensaje2");
   let pantallaGanador = document.getElementById("Winner");
   let pantallaPerdedor = document.getElementById("looser");
 
-  if(luchador1.vida <=0 ){
-
-    console.log(jugador1 +  "ha ganado y " + jugador2 +" ha mordido el polvo");
-    
-    mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
-    cambioPantallaGanador('screenOne','screenTwo','screenTree');
-    pantallaGanador.innerHTML = `<div ><img src="img/${jugador2}.jpg" class="ImagenPantalla3" ></div>`;
+  if(jugador1.vida <=0 ){
+     mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
+     mensaje2.innerHTML = " KO , Entrena un poco mas antes de vacilar";
+     cambioPantallaGanador('screenOne','screenTwo','screenTree');
+     pantallaGanador.innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla3" ></div>`;
+     pantallaPerdedor.innerHTML = `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla3"></div>`;
   }
   else
-  if(luchador2.vida <=0){
-
-    console.log(jugador2 + " esta mas que KO " + " Entrena un poco mas antes de vacilar" + " enhorabuena " + jugador1)
-    pantallaPerdedor.innerHTML = `<div ><img src="img/${jugador1}.jpg" class="ImagenPantalla3"></div>`;
-    mensaje2.innerHTML = " KO , Entrena un poco mas antes de vacilar "
+  if(jugador2.vida <=0){
+    cambioPantallaGanador('screenOne','screenTwo','screenTree');
+    pantallaGanador.innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla3" ></div>`;
+    pantallaPerdedor.innerHTML = `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla3"></div>`;
+    mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
+    mensaje2.innerHTML = " KO , Entrena un poco mas antes de vacilar ";
   }
 
   
