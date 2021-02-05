@@ -40,8 +40,8 @@ function pauseAudio() {
   let luchador1 =new Luchadores("jetlee",200,20,16,8,2);
   let luchador2 =new Luchadores("jackie",200,20,18,4,8);
   let luchador3 =new Luchadores("tonny",200,24,14,8,4);
-  let luchador4 =new Luchadores("tayson",200,22,12,6,8);
-  let luchador5 =new Luchadores("brucelee",200,22,16,6,8);
+  let luchador4 =new Luchadores("tyson",200,22,12,6,8);
+  let luchador5 =new Luchadores("bruce",200,22,16,6,8);
   let luchador6 =new Luchadores("ronda",200,30,24,4,6);
   let luchador7 =new Luchadores("mcgregor",200,30,26,6,8);
   let luchador8 =new Luchadores("ipman",200,32,24,4,8);
@@ -113,8 +113,8 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
        "jetlee" : luchador1,
        "jackie" : luchador2,
         "tonny": luchador3,
-        "tayson":luchador4,
-        "brucelee" : luchador5,
+        "tyson":luchador4,
+        "bruce" : luchador5,
         "ronda" : luchador6,
         "mcgregor":luchador7,
         "ipman" :luchador8
