@@ -204,12 +204,13 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
       if(combo == 8){
           console.log("ATAQUE ESPECIAL");
           jugador2.combo(jugador1);
-          document.getElementById("info2").innerHTML += `ATAQUE ESPECIAL`;
-          document.getElementById("info2").innerHTML += `AAAAAAAAAAAAY`;
-          document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
+          document.getElementById("info1").innerHTML += `ATAQUE ESPECIAL`;
+          document.getElementById("info1").innerHTML += `AAAAAAAAAAAAY`;
+          document.getElementById("info1").innerHTML += `vida restante ${jugador1.vida} ` ;
       }else{
         jugador2.attack(jugador1);
-
+        document.getElementById("info1").innerHTML += `AAAAAAAAAAAAY`;
+        document.getElementById("info1").innerHTML += `vida restante ${jugador1.vida} ` ;
       }
       
   };
