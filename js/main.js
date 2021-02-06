@@ -40,7 +40,7 @@ function pauseAudio() {
   let luchador1 =new Luchadores("jetlee",200,20,16,8,2);
   let luchador2 =new Luchadores("jackie",200,20,18,4,8);
   let luchador3 =new Luchadores("tonny",200,24,14,8,4);
-  let luchador4 =new Luchadores("tyson",200,22,12,6,8);
+  let luchador4 =new Luchadores("tyson",200,40,12,2,8);
   let luchador5 =new Luchadores("bruce",200,22,16,6,8);
   let luchador6 =new Luchadores("ronda",200,30,24,4,6);
   let luchador7 =new Luchadores("mcgregor",200,30,26,6,8);
@@ -148,6 +148,7 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
       document.getElementById("jugador2").innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla1" ></div>`;
       document.getElementById(jugador).className = "nuevosImagenesFighters";
       document.getElementById(jugador).onclick = "";
+      
       //document.getElementById("listoParaLaSiguientePantalla").innerHTML.style.display ='block';
 
           
@@ -163,11 +164,13 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
     let resetear = (tres,cuatro,cinco) =>{
       
        jugador="";
+       jugador1 = "";
+       jugador2 = "";
+       
        let pantalla3 = document.getElementById(tres);
-   
        let pantalla4 = document.getElementById(cuatro);
-   
        let pantalla5 = document.getElementById(cinco);
+      
        pantalla3.style.display = 'block';
        pantalla4.style.display = 'none';
        pantalla5.style.display = 'none';
@@ -185,7 +188,7 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
   
   let turno = Math.floor(Math.random() * 2);
   let combo=Math.floor(Math.random()*8);
-  barraDevida;
+  
   if(turno == 0){
       if(combo == 7){
           console.log("ATAQUE ESPECIAL");
@@ -195,7 +198,7 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
           document.getElementById("info2").innerHTML += "NO TE PASES::";
           document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
       }else{
-
+       
           jugador1.attack(jugador2);
           document.getElementById("info2").innerHTML += "GOLPEADO :::";
           document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
@@ -203,15 +206,17 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
   }else{
       if(combo == 8){
           console.log("ATAQUE ESPECIAL");
+        
           jugador2.combo(jugador1);
           document.getElementById("info1").innerHTML += "ATAQUE ESPECIAL";
           document.getElementById("info1").innerHTML += "GOLPEADO :::";
           document.getElementById("info1").innerHTML += `vida restante ${jugador1.vida} ` ;
+         
       }else{
         jugador2.attack(jugador1);
         document.getElementById("info1").innerHTML += "GOLPEADO :::" ;
         document.getElementById("info1").innerHTML += `vida restante ${jugador1.vida} ` ;
-
+        
       }
       
   };
@@ -232,11 +237,11 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
      
      pantallaGanador.innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla3" ></div>`;
      pantallaPerdedor.innerHTML = `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla3"></div>`;
-     //setTimeout(resetear(),4000);
-
-     cambioPantallaGanador('screenOne','screenTwo','screenTree');
-
+     
     
+    // cambioPantallaGanador;
+     cambioPantallaGanador('screenOne','screenTwo','screenTree');
+     resetear("screenOne","screenTwo","screenTree");
   }
 
   else
@@ -246,14 +251,13 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
     pantallaPerdedor.innerHTML = `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla3"></div>`;
     mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
     mensaje2.innerHTML = " KO , Entrena un poco mas antes de vacilar ";
-    cambioPantallaGanador('screenOne','screenTwo','screenTree');
-    //resetear;
-   // setTimeout(resetear('screenOne','screenTwo','screenTree'),4000);
+    
+   // cambioPantallaGanador;
+    cambioPantallaGanador("screenOne","screenTwo","screenTree");
+    resetear("screenOne","screenTwo","screenTree");
   }
 
-   // resetear('screenOne','screenTwo','screenTree');
-  
-
+   
 }; 
 
 const barraDevida = () => {

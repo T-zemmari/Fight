@@ -70,6 +70,28 @@ h1{
     border-radius: 50%;
     border: rgb(255, 72, 0) 0.5em solid;
 }
+
+.informacion{
+   
+    background-color: rgb(230, 154, 14);
+    width: 8em;
+    height: 8em;
+    margin: 0.5em;
+    border: rgb(255, 72, 0) 0.2em dashed;
+    color: rgb(3, 3, 3);
+    opacity: 0;
+    
+}
+.informacion:hover{
+    display: block;
+    opacity: 1;
+}
+
+
+h4{
+    color: rgb(5, 0, 0);
+    margin: auto;
+}
 .imagenFighters{
     width:8em ;
     height:8em;
