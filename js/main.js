@@ -191,33 +191,35 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
           console.log("ATAQUE ESPECIAL");
           
           jugador1.combo(jugador2);
-          document.getElementById("info2").innerHTML += `ATAQUE ESPECIAL`;
-          document.getElementById("info2").innerHTML += `NO TE PASES`;
+          document.getElementById("info2").innerHTML += "ATAQUE ESPECIAL";
+          document.getElementById("info2").innerHTML += "NO TE PASES::";
           document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
       }else{
 
           jugador1.attack(jugador2);
-          document.getElementById("info2").innerHTML += `AAAAAAAAAAAAY`;
+          document.getElementById("info2").innerHTML += "GOLPEADO :::";
           document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
       }
   }else{
       if(combo == 8){
           console.log("ATAQUE ESPECIAL");
           jugador2.combo(jugador1);
-          document.getElementById("info1").innerHTML += `ATAQUE ESPECIAL`;
-          document.getElementById("info1").innerHTML += `AAAAAAAAAAAAY`;
+          document.getElementById("info1").innerHTML += "ATAQUE ESPECIAL";
+          document.getElementById("info1").innerHTML += "GOLPEADO :::";
           document.getElementById("info1").innerHTML += `vida restante ${jugador1.vida} ` ;
       }else{
         jugador2.attack(jugador1);
-        document.getElementById("info1").innerHTML += `AAAAAAAAAAAAY`;
+        document.getElementById("info1").innerHTML += "GOLPEADO :::" ;
         document.getElementById("info1").innerHTML += `vida restante ${jugador1.vida} ` ;
+
       }
       
   };
   console.log("Vida del jugador1:" + jugador1.vida);
   console.log("Vida del jugador2:" + jugador2.vida);
-  document.getElementById("info1").innerHTML = `vida Resante ${jugador1.vida}`;
-  document.getElementById("info2").innerHTML = `vida Resante ${jugador2.vida}`;
+  
+
+ 
 
   let mensaje = document.getElementById("mensaje");
   let mensaje2 = document.getElementById("mensaje2");
