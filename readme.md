@@ -8,7 +8,7 @@ Este es mi primer proyecto utilizando HTML CSS Y JAVASCRIPT ,el objetivo es util
 
 
 ##  - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Instalacion
-No hay que intstalar ningun programa para usar el juego, este esta totalmente operativo desde cualquier navegador , pero es preferible usar google chrome.
+No hay que intstalar ningun programa para usar el juego, este,  esta totalmente operativo desde cualquier navegador , pero es preferible usar google chrome.
 
 
 
@@ -22,6 +22,8 @@ No hay que intstalar ningun programa para usar el juego, este esta totalmente op
 
 
  Si le das a este link :
+
+   https://t-zemmari.github.io/Fight/
 
   
 * Arranca la pagina con un botón que te envita a entrar al juego.
@@ -37,7 +39,7 @@ No hay que intstalar ningun programa para usar el juego, este esta totalmente op
 * Eso te llevara a la segunda pantalla donde empieza la pelea:
 ![Screenshot](https://github.com/T-zemmari/Fight/blob/develop/img/Segunda%20pagina%20donde%20comienza%20la%20pelea.jpg?raw=true)
 
-* El juego no es grafico, es solo un proyecto que utiliza un algoritmo simple para hacer que un jugador ke quite un poco de vida hasta que al final salga un ganador.
+* El juego no es grafico, es solo un proyecto que utiliza un algoritmo simple para hacer que un jugador le quite un poco de vida al otro ,hasta que al final salga un ganador.
 
 * Como ya he mencionado antes , el juego es solo para practicar los conocimientos que he adquirido durante 2 semanas en el bootcamp que estoy cursando.
 
