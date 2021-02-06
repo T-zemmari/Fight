@@ -2,20 +2,27 @@
 
 Este es mi primer proyecto utilizando HTML CSS Y JAVASCRIPT ,el objetivo es utilizando las diferentes herramientas , construir un juego medio interactivo.
 
-## Indice:
-
-   
+##  - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) Indice:
 
 
 
 
-## Installation
-
+##  - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Instalacion
 No hay que intstalar ningun programa para usar el juego, este esta totalmente operativo desde cualquier navegador , pero es preferible usar google chrome.
 
-## Usage
+
+
+
+
+## - ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) Usage
+
+
+
+ 
+
 
  Si le das a este link :
+
   
 * Arranca la pagina con un botón que te envita a entrar al juego.
 * Despues empieza la seleccion de los jugadores, de momento es solo para un UNO VS UNO ;
