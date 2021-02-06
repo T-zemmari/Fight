@@ -168,7 +168,7 @@ justify-content: space-evenly;
 /* segunda pagina */
 /* aqui hay 3 divs en columna ...header con barras de vida , bloque donde van las imagenes de los contrincantes , info de los contrincantes y la info de vida en directo , un logo de winner commming soon y  el boton de atacar*/
 .fightScreen{
-    background-image: url(/img/arena.jpg);
+    background-image: url(img/arena.jpg);
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -194,7 +194,7 @@ justify-content: space-evenly;
 .vs2{
     width: 7.5em;
     height: 3em;
-    background-image: url(/img/KO.gif);
+    background-image: url(img/KO.gif);
     background-position: center;
     background-size: cover;
     border-radius: 1em;
@@ -358,7 +358,7 @@ justify-content: space-evenly;
 }
 
 .quienHaGanado{
-    background-image: url(/img/JTDe.gif);
+    background-image: url(img/JTDe.gif);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -384,7 +384,7 @@ h3{
     width: 100vw;
     height: 100vh;
     background-color: rgb(12, 12, 12);
-    background-image: url(/img/29.gif);
+    background-image: url(img/29.gif);
     background-size: cover;
     background-clip: content-box;
 } 
