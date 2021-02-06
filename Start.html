@@ -52,7 +52,7 @@
          </div> 
   
 
-         <!--Esta es la segunda pantalla que se mostrara cuando pasemos a la fase de lucha-->
+         
 
     <div class="pantallaSeleccion" id="segundaPantalla">
         
@@ -70,21 +70,35 @@
         <div class="panelElegidos" id="jugador2" ></div>    
 
       </div> 
-     </div>
-     
+     </div> 
+
+     <!--Esta es la segunda pantalla que se mostrara cuando pasemos a la fase de lucha-->
+
      <div class="page2" id="screenTwo" style="display: none;">
         
          <div class="fightScreen">
             <header class="barraDelaPelea">
                 <audio src="audio/Música de Acción y Suspenso Música de Instriga y Suspense Música Misteriosa Instrumental_128k.mp3" id="myAudio"  ></audio>
                 <button class="Play playEnpelea"  onclick="playAudio()" type="button">P</button>
-                <div class="barraDeVidaFighter1"></div>
+                <div class="barraDeVidaFighter1" id="barra" >
+                    <div class="barraDeVida"  id=" barra1"></div>
+                    <div class="barraDeVida"  id=" barra2" ></div>
+                    <div class="barraDeVida"  id=" barra3" ></div>
+                    <div class="barraDeVida"  id=" barra4" ></div>
+                    <div class="barraDeVida"  id=" barra5" ></div>
+                    <div class="barraDeVida"  id=" barra6" ></div>
+                    <div class="barraDeVida"  id=" barra7" ></div>
+                    <div class="barraDeVida"  id=" barra8" ></div>
+                    <div class="barraDeVida"  id=" barra9" ></div>
+                    <div class="barraDeVida"  id=" barra10" ></div>
+                </div>
                 <div class="vs2"></div>
-                <div class="barraDeVidaFighter2"></div>
+                <div class="barraDeVidaFighter2" id="barra2" ></div>
                 <button class="stop stopEnpelea"  onclick="pauseAudio()" type="button">S</button>
                 
             </header>
             <div class="pantallaPelea">
+                <div class="pantallainfoVida" id="info1"></div>
                 <div class="player1" id="Contrincante1"></div>
                 <div class="Golpes"  id="hit" onclick="Golpear()">
                     <button>
@@ -92,6 +106,7 @@
                     </button>
                 </div>
                 <div class="player2" id="Contrincante2"></div>
+                <div class="pantallainfoVida" id="info2"></div>
             </div>
             
             <div class="pantallaEstadisticas">

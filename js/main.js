@@ -156,33 +156,67 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
 
        }
   }
+
+
+    // callback resetear
+
+    let resetear = (tres,cuatro,cinco) =>{
+      
+       jugador="";
+       let pantalla3 = document.getElementById(tres);
+   
+       let pantalla4 = document.getElementById(cuatro);
+   
+       let pantalla5 = document.getElementById(cinco);
+       pantalla3.style.display = 'block';
+       pantalla4.style.display = 'none';
+       pantalla5.style.display = 'none';
+      
+    }   
+   
+
+
+
+
+
  // ataques 
  let Golpear = () => {
    
   
   let turno = Math.floor(Math.random() * 2);
   let combo=Math.floor(Math.random()*8);
-
+  barraDevida;
   if(turno == 0){
       if(combo == 7){
           console.log("ATAQUE ESPECIAL");
+          
           jugador1.combo(jugador2);
+          document.getElementById("info2").innerHTML += `ATAQUE ESPECIAL`;
+          document.getElementById("info2").innerHTML += `NO TE PASES`;
+          document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
       }else{
 
           jugador1.attack(jugador2);
+          document.getElementById("info2").innerHTML += `AAAAAAAAAAAAY`;
+          document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
       }
   }else{
       if(combo == 8){
           console.log("ATAQUE ESPECIAL");
           jugador2.combo(jugador1);
+          document.getElementById("info2").innerHTML += `ATAQUE ESPECIAL`;
+          document.getElementById("info2").innerHTML += `AAAAAAAAAAAAY`;
+          document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
       }else{
         jugador2.attack(jugador1);
 
       }
       
   };
-  console.log("Vida del luchador1:" + jugador1.vida);
-  console.log("Vida del luchador2:" + jugador2.vida);
+  console.log("Vida del jugador1:" + jugador1.vida);
+  console.log("Vida del jugador2:" + jugador2.vida);
+  document.getElementById("info1").innerHTML = `vida Resante ${jugador1.vida}`;
+  document.getElementById("info2").innerHTML = `vida Resante ${jugador2.vida}`;
 
   let mensaje = document.getElementById("mensaje");
   let mensaje2 = document.getElementById("mensaje2");
@@ -192,19 +226,77 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
   if(jugador1.vida <=0 ){
      mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
      mensaje2.innerHTML = " KO , Entrena un poco mas antes de vacilar";
-     cambioPantallaGanador('screenOne','screenTwo','screenTree');
+     
      pantallaGanador.innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla3" ></div>`;
      pantallaPerdedor.innerHTML = `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla3"></div>`;
+     //setTimeout(resetear(),4000);
+
+     cambioPantallaGanador('screenOne','screenTwo','screenTree');
+
+    
   }
+
   else
   if(jugador2.vida <=0){
-    cambioPantallaGanador('screenOne','screenTwo','screenTree');
+   
     pantallaGanador.innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla3" ></div>`;
     pantallaPerdedor.innerHTML = `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla3"></div>`;
     mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
     mensaje2.innerHTML = " KO , Entrena un poco mas antes de vacilar ";
+    cambioPantallaGanador('screenOne','screenTwo','screenTree');
+    //resetear;
+   // setTimeout(resetear('screenOne','screenTwo','screenTree'),4000);
   }
 
+   // resetear('screenOne','screenTwo','screenTree');
   
 
 }; 
+
+const barraDevida = () => {
+  let barra1 = document.getElementById("barra1");
+  let barra2 = document.getElementById("barra2");
+  let barra3 = document.getElementById("barra3");
+  let barra4 = document.getElementById("barra4");
+  let barra5 = document.getElementById("barra5");
+  let barra6 = document.getElementById("barra6");
+  let barra7 = document.getElementById("barra7");
+  let barra8 = document.getElementById("barra8");
+  let barra9 = document.getElementById("barra9");
+  let barra10 = document.getElementById("barra10");
+
+
+
+  if( 180 >= jugador.vida <200 ){
+    barra1.innerHTML.className= "negro";
+  }
+  if(  160>= jugador.vida <180){
+    barra2.innerHTML.className= "negro";
+  }
+  if( 140 >= jugador1.vida <160 ){
+    barra3.innerHTML.className= "negro";
+  }
+  if( 120 >= jugador1.vida <140 ){
+    barra4.innerHTML.className= "negro";
+  }
+  if( 100 >= jugador1.vida <120 ){
+    barra5.innerHTML.className= "amarillo";
+  }
+  if( 80>= jugador1.vida <100 ){
+    barra6.innerHTML.className= "amarillo";
+  }
+  if( 60 >= jugador1.vida <80 ){
+    barra7.innerHTML.className= "amarillo";
+  }
+  if( 40 >= jugador1.vida <60 ){
+    barra8.innerHTML.className= "amarillo";
+  }
+  if( 20 >= jugador1.vida <40 ){
+    barra9.innerHTML.className= "rojo";
+  }
+  if( 0 >= jugador1.vida <20 ){
+    barra10.innerHTML.className= "rojo";
+  }
+
+}
+

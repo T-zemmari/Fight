@@ -145,7 +145,7 @@ justify-content: space-evenly;
 }
 
 /* segunda pagina */
-/* aqui hay 3 divs en columna header con barras de vida , bloque donde van las imagenes de los contrincantes y el boton de atacar*/
+/* aqui hay 3 divs en columna ...header con barras de vida , bloque donde van las imagenes de los contrincantes , info de los contrincantes y la info de vida en directo , un logo de winner commming soon y  el boton de atacar*/
 .fightScreen{
     background-image: url(/img/arena.jpg);
     width: 100vw;
@@ -178,6 +178,7 @@ justify-content: space-evenly;
     background-size: cover;
     border-radius: 1em;
 }
+
 .barraDeVidaFighter1{
     width: 15em;
     height: 1em;
@@ -185,7 +186,69 @@ justify-content: space-evenly;
     margin-left: 0.5em;
     border: 0.2em solid yellow;
     border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+
+} 
+/*son bloques dentro del div de la barra de vida que iran cambiando de color segun baje la vida*/
+.barraDeVida{
+    width: 1.5em;
+    height: 1em;
+    background-color: green;}
+
+
+.negro1{
+    width: 1.5em;
+    height: 1em;
+    background-color: black;
+
 }
+.negro2{
+    width: 1.5em;
+    height: 1em;
+    background-color: black;
+}
+.negro3{
+    width: 1.5em;
+    height: 1em;
+    background-color: black;
+}
+.amarillo1{
+    width: 1.5em;
+    height: 1em;
+    background-color: yellow;
+}
+
+.amarillo2{
+    width: 1.5em;
+    height: 1em;
+    background-color: yellow;
+}
+
+.amarillo3{
+    width: 1.5em;
+    height: 1em;
+    background-color: yellow;
+}
+
+.rojo1{
+    width: 1.5em;
+    height: 1em;
+    background-color: rgb(247, 38, 38);
+}
+.rojo2{
+    width: 1.5em;
+    height: 1em;
+    background-color: rgb(240, 10, 10);
+}
+.rojo3{
+    width: 1.5em;
+    height: 1em;
+    background-color: rgb(85, 3, 3);
+}
+
+
+
 .barraDeVidaFighter2{
     width: 15em;
     height: 1em;
@@ -207,22 +270,33 @@ justify-content: space-evenly;
     justify-content: space-evenly;
 
 }
+
+.pantallainfoVida{
+    width: 10em;
+    height: 50vh;
+    background-color: black;
+    color: blanchedalmond;
+    border: 0.2em dashed red;
+
+
+}
+
 .player1{
-    width: 20em;
+    width: 15em;
     height: 60vh;
     border: red solid 0.2em;
     background-color: rgb(14, 13, 13);
     
 }
 .player2{
-    width: 20em;
+    width: 15em;
     height:60vh;
     border: red solid 0.2em;
     background-color: rgb(14, 13, 13);
 }
 .ImagenPantalla2{
-    width: 20em;
-    height:60vh;
+    width: 15em;
+    height: 60vh;
 }
 .Golpes{
   width: 8em;
