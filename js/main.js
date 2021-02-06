@@ -162,7 +162,16 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
       document.getElementById("nombre1").innerHTML += `${jugador1.nombre}`;
       document.getElementById("fuerza1").innerHTML += `${jugador1.fuerza}`;
       document.getElementById("suerte1").innerHTML += `${jugador1.suerte}`;
-      document.getElementById("Je").style.visibility = "visible"
+
+      //document.getElementById("Je").style.visibility = "visible";
+    
+     /* document.getElementById("Ja").style.visibility = "visible"
+      document.getElementById("Ro").style.visibility = "visible"
+      document.getElementById("Ta").style.visibility = "visible"
+      document.getElementById("To").style.visibility = "visible"
+      document.getElementById("Mc").style.visibility = "visible"
+      document.getElementById("Br").style.visibility = "visible"
+      document.getElementById("Ip").style.visibility = "visible"*/
       document.getElementById("Contrincante1").innerHTML =`<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla2"></div>`;
       document.getElementById("jugador1").innerHTML =  `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla1"></div>`;
       document.getElementById(jugador).className = "nuevosImagenesFighters";
@@ -273,7 +282,7 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
     
     // cambioPantallaGanador;
      cambioPantallaGanador('screenOne','screenTwo','screenTree');
-     resetear("screenOne","screenTwo","screenTree");
+    // resetear("screenOne","screenTwo","screenTree");
   }
 
   else
@@ -286,7 +295,7 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
     
    // cambioPantallaGanador;
     cambioPantallaGanador("screenOne","screenTwo","screenTree");
-    resetear("screenOne","screenTwo","screenTree");
+   // resetear("screenOne","screenTwo","screenTree");
   }
 
    
