@@ -22,7 +22,7 @@
 
                 <!--- Son divs ocultos , muestran informacion cuando pasa el raton por el player-->
 
-                <div class=" informacion">
+                <div class=" informacion" id="Je" style="visibility: hidden;" >
                     <H3>Informacion</H3>
                     <h4>Name : Jet lee</h4>
                     <h4>Fuerza : 20</h4>
@@ -31,7 +31,7 @@
                     <h4>Vida: 200</h4>
                     <h4>Handicap :2</h4>
                  </div>
-                 <div class=" informacion" >
+                 <div class=" informacion"  id="Ja"  style="visibility: hidden;"  >
                     <H3>Informacion</H3>
                     <h4>Name : Jackie</h4>
                     <h4>Fuerza : 20</h4>
@@ -41,10 +41,8 @@
                     <h4>Handicap :8</h4>
                  </div>
                  <!--- Son divs de los player-->
-                <div class="Fighters" id="jackie" onclick="seleccion('jackie')";>
-                    <img src="img/jackie.jpg" class="imagenFighters">
-                </div>
-                  <div class="Fighters" id= "jetlee" onclick="seleccion('jetlee')";>
+                
+                  <div class="Fighters" id= "jetlee" onmouseover="mostrar()"; onclick="seleccion('jetlee')"; >
                      <img src="img/jetlee.jpg"  class="imagenFighters" >
                   </div>
                  <div class="Fighters" id="jackie" onclick="seleccion('jackie')";>
@@ -58,7 +56,7 @@
                 </div>
 
         <!--- Son divs ocultos , muestran informacion cuando pasa el raton por el player-->
-                <div class=" informacion">
+                <div class=" informacion" id="To"   style="visibility: hidden;"  >
                     <H3>Informacion</H3>
                     <h4>Name : Tony jaa</h4>
                     <h4>Fuerza : 24</h4>
@@ -68,7 +66,7 @@
                     <h4>Handicap :4</h4>
 
                  </div>
-                 <div class=" informacion" >
+                 <div class=" informacion" id="Ip"  style="visibility: hidden;"  >
                     <H3>Informacion</H3>
                     <h4>Name : Ipman</h4>
                     <h4>Fuerza : 32</h4>
@@ -81,7 +79,7 @@
         
              <div class="RestoDeJugadores">
           <!--- Son divs ocultos , muestran informacion cuando pasa el raton por el player-->
-                <div class="informacion">
+                <div class="informacion" id="Ro" style="visibility: hidden;"   >
                     <H3>Informacion</H3>
                     <h4>Name : Ronda</h4>
                     <h4>Fuerza : 30</h4>
@@ -90,7 +88,7 @@
                     <h4>Vida: 200</h4>
                     <h4>Handicap :6</h4>
                  </div>
-                 <div class=" informacion">
+                 <div class=" informacion" id="Br" style="visibility: hidden;"   >
                     <H3>Informacion</H3>
                     <h4>Name : Bruce lee</h4>
                     <h4>Fuerza : 22</h4>
@@ -113,7 +111,7 @@
                   <img src="img/tyson.jpg"  class="imagenFighters">
               </div>
                <!--- Son divs ocultos , muestran informacion cuando pasa el raton por el player-->
-              <div class=" informacion">
+              <div class=" informacion" id="Mc"   style="display: none;"  >
                 <H3>Informacion</H3>
                 <h4>Name : Mcgregor</h4>
                     <h4>Fuerza : 30</h4>
@@ -122,7 +120,7 @@
                     <h4>Vida: 200</h4>
                     <h4>Handicap :8</h4>
              </div>
-             <div class=" informacion" >
+             <div class=" informacion"  id="Ta"  style="visibility: hidden;"   >
                 <H3>Informacion</H3>
                     <h4>Name : Tyson</h4>
                     <h4>Fuerza : 40</h4>

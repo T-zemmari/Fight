@@ -79,13 +79,13 @@ h1{
     margin: 0.5em;
     border: rgb(255, 72, 0) 0.2em dashed;
     color: rgb(3, 3, 3);
-    opacity: 0;
+    
     
 }
-:hover .informacion{
+/*:hover .informacion{
     opacity: 1;
 }
-
+*/
 
 h4{
     color: rgb(5, 0, 0);

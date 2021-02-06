@@ -9,6 +9,37 @@ function pauseAudio() {
   reproducir.pause();
 }
 
+
+const mostrar =() => {
+  var most = document.getElementById("Je");
+  most.onmouseover.style.visibility = "visible";
+} 
+
+//Hoover Estadisticas:
+
+ 
+ /*const  showStatistic =(hov1,hov2,hov3,hov4,hov5,hov6,hov7,hov8)=>{
+  let show1 = document.getElementById("Je");
+  let show2 = document.getElementById("Ja");
+  let show3 = document.getElementById("To");
+  let show4 = document.getElementById("Ip");
+  let show5 = document.getElementById("Ro");
+  let show6 = document.getElementById("Br");
+  let show7 = document.getElementById("Mc");
+  let show8 = document.getElementById("Ta");
+
+  show1.onmouseover.style.display = "block";
+  show2.onmouseover.style.display = "block";
+  show3.onmouseover.style.display = "block";
+  show4.onmouseover.style.display = "block";
+  show5.onmouseover.style.display = "block";
+  show6.onmouseover.style.display = "block";
+  show7.onmouseover.style.display = "block";
+  show8.onmouseover.style.display = "block";
+}
+*/
+ 
+
 // preparando la clase luchadores
  class Luchadores{
      constructor(nombre,vida,fuerza,defensa,suerte,handicap){
@@ -131,6 +162,7 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
       document.getElementById("nombre1").innerHTML += `${jugador1.nombre}`;
       document.getElementById("fuerza1").innerHTML += `${jugador1.fuerza}`;
       document.getElementById("suerte1").innerHTML += `${jugador1.suerte}`;
+      document.getElementById("Je").style.visibility = "visible"
       document.getElementById("Contrincante1").innerHTML =`<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla2"></div>`;
       document.getElementById("jugador1").innerHTML =  `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla1"></div>`;
       document.getElementById(jugador).className = "nuevosImagenesFighters";
