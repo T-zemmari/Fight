@@ -279,7 +279,7 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
      
 
   
-    
+    // volver a la pagina inicial despues de 10s y refrescar despues de 3s
     setTimeout(() => {
       resetear("screenOne","screenTwo","screenTree");
       setTimeout(() => {
@@ -299,20 +299,7 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
     mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
     mensaje2.innerHTML = " KO , Entrena un poco mas antes de vacilar ";
     
-     
-      //cambioPantallaGanador("screenOne","screenTwo","screenTree");
-     // resetear("screenOne","screenTwo","screenTree");
-
-
-         /* setTimeout(() => {
-         cambioPantallaGanador('screenOne','screenTwo','screenTree');
-         }, 4000);
-
-   setTimeout(() => {
-    resetear("screenOne","screenTwo","screenTree");
-   }, 6000);*/
-
-   //cambioPantallaGanador('screenOne','screenTwo','screenTree');
+    // volver a la pagina inicial despues de 10s y refrescar despues de 3s
 
    setTimeout(() => {
     resetear("screenOne","screenTwo","screenTree");
