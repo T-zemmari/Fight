@@ -168,7 +168,7 @@ justify-content: space-evenly;
 /* segunda pagina */
 /* aqui hay 3 divs en columna ...header con barras de vida , bloque donde van las imagenes de los contrincantes , info de los contrincantes y la info de vida en directo , un logo de winner commming soon y  el boton de atacar*/
 .fightScreen{
-    background-image: url(img/arena.jpg);
+    background-image: url(../img/arena.jpg);
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -194,7 +194,7 @@ justify-content: space-evenly;
 .vs2{
     width: 7.5em;
     height: 3em;
-    background-image: url(img/KO.gif);
+    background-image: url(../img/KO.gif);
     background-position: center;
     background-size: cover;
     border-radius: 1em;
@@ -358,7 +358,7 @@ justify-content: space-evenly;
 }
 
 .quienHaGanado{
-    background-image: url(img/JTDe.gif);
+    background-image: url(../img/JTDe.gif);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -384,7 +384,7 @@ h3{
     width: 100vw;
     height: 100vh;
     background-color: rgb(12, 12, 12);
-    background-image: url(img/29.gif);
+    background-image: url(../img/29.gif);
     background-size: cover;
     background-clip: content-box;
 } 
@@ -429,12 +429,12 @@ background-color: rgb(14, 13, 13);
     width: 30em;
     height: 5em;
     border: red solid 0.2em;
-    background-color: rgba(43, 255, 0,1);
+    background-color: rgb(13, 14, 13);
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: rgb(1, 0, 8);
+    color: rgb(246, 245, 250);
     
 }
 
@@ -442,4 +442,13 @@ background-color: rgb(14, 13, 13);
     width: 15em;
     height: 20em;
     
+}
+.reseteo{
+    margin-top: 20em;
+    height: 6em;
+    width: 15em;
+    background-color: black;
+    color: blanchedalmond;
+    border: red  0.2em solid;
+    border-radius: 1.5em;
 }

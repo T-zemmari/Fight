@@ -10,10 +10,10 @@ function pauseAudio() {
 }
 
 
-const mostrar =() => {
+/*const mostrar =() => {
   var most = document.getElementById("Je");
   most.onmouseover.style.visibility = "visible";
-} 
+} */
 
 //Hoover Estadisticas:
 
@@ -85,10 +85,18 @@ const mostrar =() => {
     let vidaInicial = 200;
     luchador1.vida= vidaInicial;
     luchador2.vida= vidaInicial;
-    jugador1 ="";
-    jugador2 ="";
-
+    
   }
+
+
+  //function restablecer todo:
+
+    const reload = () =>{
+      let initiaState = document.getElementById("reseteo");
+      location.reload();
+
+    
+    }
   
   //cambio de pantalla
 
@@ -100,7 +108,7 @@ const mostrar =() => {
     let pantalla3 = document.getElementById(stage3);
     pantalla1.style.display = 'none';
     pantalla2.style.display = 'block';
-    pantalla3.style.display = 'none';
+   // pantalla3.style.display = 'none';
 
 };
 
@@ -189,12 +197,6 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
       document.getElementById("jugador2").innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla1" ></div>`;
       document.getElementById(jugador).className = "nuevosImagenesFighters";
       document.getElementById(jugador).onclick = "";
-      
-      //document.getElementById("listoParaLaSiguientePantalla").innerHTML.style.display ='block';
-
-          
-         
-      //cambioDePantalla("screenOne","screenTwo");
 
        }
   }
@@ -202,12 +204,10 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
 
     // callback resetear
 
+  
+
     let resetear = (tres,cuatro,cinco) =>{
       
-       jugador="";
-       jugador1 = "";
-       jugador2 = "";
-       
        let pantalla3 = document.getElementById(tres);
        let pantalla4 = document.getElementById(cuatro);
        let pantalla5 = document.getElementById(cinco);
@@ -217,13 +217,10 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
        pantalla5.style.display = 'none';
       
     }   
-   
-
-
-
 
 
  // ataques 
+
  let Golpear = () => {
    
   
@@ -263,14 +260,13 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
   };
   console.log("Vida del jugador1:" + jugador1.vida);
   console.log("Vida del jugador2:" + jugador2.vida);
-  
-
- 
-
   let mensaje = document.getElementById("mensaje");
   let mensaje2 = document.getElementById("mensaje2");
   let pantallaGanador = document.getElementById("Winner");
   let pantallaPerdedor = document.getElementById("looser");
+
+
+   // Resultados
 
   if(jugador1.vida <=0 ){
      mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
@@ -279,10 +275,20 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
      pantallaGanador.innerHTML = `<div ><img src="img/${jugador2.nombre}.jpg" class="ImagenPantalla3" ></div>`;
      pantallaPerdedor.innerHTML = `<div ><img src="img/${jugador1.nombre}.jpg" class="ImagenPantalla3"></div>`;
      
-    
-    // cambioPantallaGanador;
      cambioPantallaGanador('screenOne','screenTwo','screenTree');
-    // resetear("screenOne","screenTwo","screenTree");
+     
+
+  
+    
+    setTimeout(() => {
+      resetear("screenOne","screenTwo","screenTree");
+      setTimeout(() => {
+        location.reload();
+      }, 3000);
+    }, 10000);
+   
+    
+
   }
 
   else
@@ -293,11 +299,30 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
     mensaje.innerHTML = "Enhorabuena eres the best FIGHTER ever";
     mensaje2.innerHTML = " KO , Entrena un poco mas antes de vacilar ";
     
-   // cambioPantallaGanador;
-    cambioPantallaGanador("screenOne","screenTwo","screenTree");
-   // resetear("screenOne","screenTwo","screenTree");
-  }
+     
+      //cambioPantallaGanador("screenOne","screenTwo","screenTree");
+     // resetear("screenOne","screenTwo","screenTree");
 
+
+         /* setTimeout(() => {
+         cambioPantallaGanador('screenOne','screenTwo','screenTree');
+         }, 4000);
+
+   setTimeout(() => {
+    resetear("screenOne","screenTwo","screenTree");
+   }, 6000);*/
+
+   //cambioPantallaGanador('screenOne','screenTwo','screenTree');
+
+   setTimeout(() => {
+    resetear("screenOne","screenTwo","screenTree");
+    setTimeout(() => {
+      location.reload();
+    }, 3000);
+  }, 10000);
+   
+   }
+  
    
 }; 
 
