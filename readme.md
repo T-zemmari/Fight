@@ -10,7 +10,7 @@ Este es mi primer proyecto utilizando HTML CSS Y JAVASCRIPT ,el objetivo es util
 
 
 ##  - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Instalación 
-No hay que instalar ningún programa para usar el juego, este,  esta totalmente operativo desde cualquier navegador , pero es preferible usar Google Chrome..
+No hay que instalar ningún programa para usar el juego, esta totalmente operativo desde cualquier navegador , pero es preferible usar Google Chrome..
 
 [Subir](#top)
 
