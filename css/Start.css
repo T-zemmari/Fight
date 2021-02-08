@@ -179,7 +179,7 @@ justify-content: space-evenly;
 .barraDelaPelea{
     width: 100vw;
     height: 4em;
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(12, 11, 11);
 }
 .playEnpelea{
     width: 3em;
@@ -203,7 +203,7 @@ justify-content: space-evenly;
 .barraDeVidaFighter1{
     width: 15em;
     height: 1em;
-    background-color: green;
+ 
     margin-left: 0.5em;
     border: 0.2em solid yellow;
     border-radius: 1em;
@@ -211,14 +211,43 @@ justify-content: space-evenly;
     flex-direction: row;
 
 } 
+.barraDeVidaFighter2{
+    width: 15em;
+    height: 1em;
+    
+    margin-left: 0.5em;
+    border: 0.2em solid yellow;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+
+} 
+
+
+progress[value] {
+    width: 15em;
+    height: 1em;
+    border: none;
+    
+    
+}
+progress[value]::-webkit-progress-bar {
+    background-color: darkred;
+}
+progress[value]::-webkit-progress-value {
+    background-color: gold;
+}
 /*son bloques dentro del div de la barra de vida que iran cambiando de color segun baje la vida*/
-.barraDeVida{
+/*.barraDeVida{
     width: 1.5em;
     height: 1em;
-    background-color: green;}
+    background-color: rgb(9, 180, 9);
+    border-radius: 1em;
+}*/
+    
 
 
-.negro1{
+/*.negro1{
     width: 1.5em;
     height: 1em;
     background-color: black;
@@ -277,7 +306,7 @@ justify-content: space-evenly;
     margin-left: 1em;
     border: 0.2em solid yellow;
     border-radius: 1em;
-}
+}*/
 /*div de los contrincantes*/
 
 .pantallaPelea{

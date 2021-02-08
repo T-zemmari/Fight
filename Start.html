@@ -162,22 +162,15 @@
             <header class="barraDelaPelea">
                 <audio src="audio/Música de Acción y Suspenso Música de Instriga y Suspense Música Misteriosa Instrumental_128k.mp3" id="myAudio"  ></audio>
                 <button class="Play playEnpelea"  onclick="playAudio()" type="button">P</button>
-                <div class="barraDeVidaFighter1" id="barra" >
-                    <div class="barraDeVida"  id=" barra1"></div>
-                    <div class="barraDeVida"  id=" barra2" ></div>
-                    <div class="barraDeVida"  id=" barra3" ></div>
-                    <div class="barraDeVida"  id=" barra4" ></div>
-                    <div class="barraDeVida"  id=" barra5" ></div>
-                    <div class="barraDeVida"  id=" barra6" ></div>
-                    <div class="barraDeVida"  id=" barra7" ></div>
-                    <div class="barraDeVida"  id=" barra8" ></div>
-                    <div class="barraDeVida"  id=" barra9" ></div>
-                    <div class="barraDeVida"  id=" barra10" ></div>
+                <div class="barraDeVidaFighter1"  >
+                   <progress id="life1" value="200" max="200" min="0" >progress</progress>
                 </div>
                 <div class="vs2"></div>
-                <div class="barraDeVidaFighter2" id="barra2" ></div>
+                <div class="barraDeVidaFighter2">
+                    <progress id="life2" value="200" max="200" min="0" >progress</progress>
+                </div>
                 <button class="stop stopEnpelea"  onclick="pauseAudio()" type="button">S</button>
-                
+               
             </header>
             <div class="pantallaPelea">
                 <div class="pantallainfoVida" id="info1"></div>

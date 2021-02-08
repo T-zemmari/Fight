@@ -16,16 +16,6 @@ No hay que instalar ningún programa para usar el juego, esta totalmente operati
 
 
 
-
-
-
-
-
-
-
-
-
-
  
 ## - ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) Usage
 
@@ -58,18 +48,10 @@ No hay que instalar ningún programa para usar el juego, esta totalmente operati
 
 
 
-
-
-
 ## - ![#00FF00](https://via.placeholder.com/15/c5f015/000000?text=+) Conclusión
 
 Estoy bastante contento con este proyecto ya que ha sido una gran experiencia implementando JavaScript, teniendo en cuenta que hace un mes no sabia nada de programación.
 Se que tengo que mejorar y seguramente refactorizare este proyecto.
-
-
-
-
-
 
 
 

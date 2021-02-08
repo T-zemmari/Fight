@@ -222,7 +222,10 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
  // ataques 
 
  let Golpear = () => {
-   
+  let life1 = document.getElementById("life1");
+  let life2 = document.getElementById("life2");
+
+  
   
   let turno = Math.floor(Math.random() * 2);
   let combo=Math.floor(Math.random()*8);
@@ -232,32 +235,42 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
           console.log("ATAQUE ESPECIAL");
           
           jugador1.combo(jugador2);
+         // barraDevida();
+         
           document.getElementById("info2").innerHTML += "ATAQUE ESPECIAL";
           document.getElementById("info2").innerHTML += "NO TE PASES::";
           document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
       }else{
        
           jugador1.attack(jugador2);
+         // barraDevida();
           document.getElementById("info2").innerHTML += "GOLPEADO :::";
           document.getElementById("info2").innerHTML += `vida restante ${jugador2.vida} ` ;
       }
   }else{
       if(combo == 8){
           console.log("ATAQUE ESPECIAL");
-        
+          
           jugador2.combo(jugador1);
+         // barraDevida();
           document.getElementById("info1").innerHTML += "ATAQUE ESPECIAL";
           document.getElementById("info1").innerHTML += "GOLPEADO :::";
           document.getElementById("info1").innerHTML += `vida restante ${jugador1.vida} ` ;
          
       }else{
         jugador2.attack(jugador1);
+       // barraDevida();
         document.getElementById("info1").innerHTML += "GOLPEADO :::" ;
         document.getElementById("info1").innerHTML += `vida restante ${jugador1.vida} ` ;
         
       }
       
   };
+    life1.value = `${jugador1.vida}`;
+    life2.value = `${jugador2.vida}`;
+    console.log(jugador1.nombre + jugador1.vida);
+    console.log(jugador2.nombre + jugador2.vida);
+ 
   console.log("Vida del jugador1:" + jugador1.vida);
   console.log("Vida del jugador2:" + jugador2.vida);
   let mensaje = document.getElementById("mensaje");
@@ -313,8 +326,8 @@ let cambioPantallaGanador =(uno,dos,tres) =>{
    
 }; 
 
-const barraDevida = () => {
-  let barra1 = document.getElementById("barra1");
+// preparando variables para cambiar para el cambio de classe:
+/*  let barra1 = document.getElementById("barra1");
   let barra2 = document.getElementById("barra2");
   let barra3 = document.getElementById("barra3");
   let barra4 = document.getElementById("barra4");
@@ -327,36 +340,80 @@ const barraDevida = () => {
 
 
 
-  if( 180 >= jugador.vida <200 ){
-    barra1.innerHTML.className= "negro";
+
+
+
+
+const barraDevida =() => {
+  
+
+
+
+  if( 180 >= jugador1.vida <200 ){
+    barra1.innerHTML.className= "negro1";
   }
-  if(  160>= jugador.vida <180){
-    barra2.innerHTML.className= "negro";
+  if( 180 >= jugador2.vida <200 ){
+    barra1.innerHTML.className= "negro1";
+  }
+  if(  160>= jugador1.vida <180){
+    barra2.innerHTML.className= "negro1";
+  }
+  if( 160 >= jugador2.vida <180 ){
+    barra1.innerHTML.className= "negro1";
   }
   if( 140 >= jugador1.vida <160 ){
-    barra3.innerHTML.className= "negro";
+    barra3.innerHTML.className= "negro1";
+  }
+  if( 140 >= jugador2.vida <160 ){
+    barra1.innerHTML.className= "negro1";
   }
   if( 120 >= jugador1.vida <140 ){
-    barra4.innerHTML.className= "negro";
+    barra4.innerHTML.className= "negro1";
+  }
+  if( 120 >= jugador2.vida <140 ){
+    barra1.innerHTML.className= "negro1";
   }
   if( 100 >= jugador1.vida <120 ){
     barra5.innerHTML.className= "amarillo";
   }
+  if( 100 >= jugador2.vida <120 ){
+    barra1.innerHTML.className= "amarillo";
+  }
   if( 80>= jugador1.vida <100 ){
     barra6.innerHTML.className= "amarillo";
   }
+  if( 80 >= jugador2.vida <100 ){
+    barra1.innerHTML.className= "amarillo";
+  }
   if( 60 >= jugador1.vida <80 ){
-    barra7.innerHTML.className= "amarillo";
+    barra1.innerHTML.className= "amarillo";
+  }
+  if( 60>= jugador2.vida <80 ){
+    barra1.innerHTML.className= "amarillo";
   }
   if( 40 >= jugador1.vida <60 ){
+    barra7.innerHTML.className= "amarillo";
+  }
+  if( 40 >= jugador2.vida <60 ){
     barra8.innerHTML.className= "amarillo";
   }
   if( 20 >= jugador1.vida <40 ){
     barra9.innerHTML.className= "rojo";
   }
+  if( 20 >= jugador2.vida <40 ){
+    barra1.innerHTML.className= "rojo";
+  }
   if( 0 >= jugador1.vida <20 ){
     barra10.innerHTML.className= "rojo";
   }
+  if( 0 >= jugador2.vida <20 ){
+    barra1.innerHTML.className= "rojo";
+  }
+
+
+
+
 
 }
 
+*/
